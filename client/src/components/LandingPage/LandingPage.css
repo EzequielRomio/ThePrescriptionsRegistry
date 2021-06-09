@@ -1,0 +1,9 @@
+.landingPageTitle {
+    color: white;
+    background-color: teal;
+    padding: 14px 0px 14px 40px;
+}
+
+#landingPageSubtitle {
+    width: 200px;
+}
