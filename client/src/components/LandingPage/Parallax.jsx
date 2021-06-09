@@ -29,7 +29,7 @@ export default function Carousel({url}) {
         pagination={{"clickable": true}} 
         navigation={true}
         autoplay={{
-            "delay": 3000,
+            "delay": 5000,
             "disableOnInteraction": false
           }} 
         className="mySwiper"
@@ -43,36 +43,42 @@ export default function Carousel({url}) {
 
         </div>
         <SwiperSlide>
-            <div className="title" data-swiper-parallax="-300">Slide 1</div>
-            <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div className="title" data-swiper-parallax="-300">Visual Health</div>
+            <div className="subtitle" data-swiper-parallax="-200">How to take care on your eyes</div>
             <div className="text" data-swiper-parallax="-100">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus
-                felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet
-                magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros
-                quis feugiat.</p>
+                <p>
+                    From childhood to old age, our vision evolves as our eyes are exposed to different situations and risks. 
+                    With changing lifestyles, other risks are emerging which must be addressed through adopting new habits. 
+                    Today, for example, urbanization has encouraged indoor living that increases cases of myopia. 
+                    It’s also accepted that the continual use of digital screens causes eye strain and can encourage the development 
+                    of certain visual defects. Solutions exist for these new situations. We need to raise awareness, 
+                    regularly check vision and provide appropriate solutions that are accessible to everyone
+                </p>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="title" data-swiper-parallax="-300">Slide 2</div>
-            <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div className="title" data-swiper-parallax="-300">Prescriptions Registry</div>
+            <div className="subtitle" data-swiper-parallax="-200">Load up your prescriptions</div>
             <div className="text" data-swiper-parallax="-100">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus
-                felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet
-                magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros
-                quis feugiat.</p>
+                <p>
+                    When you look at your prescription for eyeglasses, you will see numbers listed under the headings of OS and OD. 
+                    They are Latin abbreviations: OS (oculus sinister) means the left eye and OD (oculus dextrus) means the right eye. 
+                    Occasionally, you will see a notation for OU, which means something involving both eyes.
+                </p>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="title" data-swiper-parallax="-300">Slide 3</div>
-            <div className="subtitle" data-swiper-parallax="-200">Subtitle</div>
+            <div className="title" data-swiper-parallax="-300">Doctor's Account</div>
+            <div className="subtitle" data-swiper-parallax="-200">Doctors can get an special account to store data</div>
             <div className="text" data-swiper-parallax="-100">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus
-                felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet
-                magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros
-                quis feugiat.</p>
+                <p>
+                    The Greek roots of the word ophthalmology are <bold>ὀφθαλμός</bold> (ophthalmos, "eye") 
+                    and <bold> -λoγία </bold> (-logia, "study, discourse"). 
+                    The discipline applies to all animal eyes, whether human or not, since the practice and 
+                    procedures are quite similar with respect to disease processes, 
+                    while differences in anatomy or disease prevalence, whether subtle or substantial, 
+                    may differentiate the two
+                </p>
             </div>
         </SwiperSlide>
     </Swiper>
