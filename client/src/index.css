@@ -33,6 +33,7 @@ navajoWhite
 
 h1, h2, h3, h4, h5 {
   margin: 0;
+  padding: 0;
 }
 
 
@@ -45,11 +46,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
+bold {
+  font-weight: 800;
+}
 
 .titleFont {
   /* font-family: 'Bebas Neue', cursive; */
@@ -69,4 +80,28 @@ code {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.largeSeparator {
+  border: 1px solid gainsboro;
+  margin: 40px 0px 40px 0px;
+  width: 80%;
+}
+
+.linkButton {
+  /* height: 40px;
+  width: 160px; */
+  width: max-content;
+  height: max-content;
+  padding: 10px 60px 10px 60px;
+  border-radius: 4px;
+  background-color: dodgerblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkButton:hover {
+  background-color: #3a9bfc;
 }
