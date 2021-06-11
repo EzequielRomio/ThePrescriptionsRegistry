@@ -105,3 +105,12 @@ bold {
 .linkButton:hover {
   background-color: #3a9bfc;
 }
+
+.marginTop {
+  margin-top: 40px;
+}
+
+.border {
+  border-radius: 10px;
+  border: 2px solid lightblue;
+}

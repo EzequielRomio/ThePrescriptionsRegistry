@@ -20,10 +20,6 @@
     text-shadow: none;
 }
 
-#landingVideo {
-    border-radius: 10px;
-    border: 2px solid lightblue;
-}
 
 #landingPageBottom {
     background-color: rgb(226, 239, 248);
@@ -37,13 +33,18 @@
     align-items: flex-start;
 }
 
-#profAccount {
+#landingPageBottom p {
+    color: rgb(26, 128, 230);
+}
+
+#landingLeftColumn {
+    width: min-content;
+}
+
+#landingRightColumn {
     width: 25%;
 }
 
-#profAccount p {
-    color: rgb(26, 128, 230);
-}
 
 /* Swiper class provided by swiper demo */
 

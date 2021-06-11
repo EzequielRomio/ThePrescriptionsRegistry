@@ -32,13 +32,29 @@ const LandingPage = () => {
             <div className='largeSeparator'></div>
 
             <div id='landingPageBottom' className='displayFlexRow'>
-                <div >
+                {/*******  Left column  *******/}
+                <div id='landingLeftColumn'>
                     <h2 className='subtitleFont'>Have you tried contact lens?</h2>
-                    <video autoplay="true" loop muted="muted" id={'landingVideo'}>
+                    <video autoplay="true" loop muted="muted" className='border'>
                         <source src={lenses_manuf} type="video/mp4"></source>
                     </video>
+
+                    <h2 className='subtitleFont marginTop'>Blue light filter</h2>
+                    <img src='https://i.insider.com/5ec6c3871918245574779666?width=700' width='644px' height='364px' className='border'></img>
+                    <p>
+                        Digital screens emit blue light, which can have negative consequences on your peepers, 
+                        including strain, dry or watery eyes and irritated eyes. Blue light is also known to 
+                        sabotage your sleep schedule because it messes with your circadian rhythm 
+                        (AKA your internal clock that tells you when it’s time to sleep or be awake).
+                        Unfortunately, most of us can’t escape having to use computers, tablets and phones 
+                        in our everyday life. So how do we handle the negative consequences of digital screens? 
+                        (Besides suffer in silence as we continue to type and scroll away.)
+                        Enter <bold>blue light</bold> blocking glasses as the latest wellness trend.
+                    </p>
                 </div>
-                <div id='profAccount'>
+
+                {/*******  Right column  *******/}
+                <div id='landingRightColumn'>
                     <h2 className='subtitleFont'>Professional Account</h2>
                     <p>
                         Sometimes working with a lot of patients could be a problem to have a Registry
