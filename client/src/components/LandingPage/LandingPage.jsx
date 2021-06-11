@@ -8,7 +8,7 @@ import lenses_manuf from '../../images/contact_lenses.mp4';
 const LandingPage = () => {
     return (
         <div id='landingPageContainer'>
-            <div className='landingPageTitle displayFlexRow'> 
+            {/* <div className='landingPageTitle displayFlexRow'> 
                 <h1 className='titleFont'>
                     The Prescriptions Registry
                 </h1>
@@ -17,7 +17,7 @@ const LandingPage = () => {
                         The way to take <br></br> care of your eyes
                     </h3>
                 </div>
-            </div>
+            </div> */}
 
             <Parallax 
                 url={'https://www.genomicseducation.hee.nhs.uk/wp-content/uploads/2019/11/Eye-DNA-1350x450px-1345x450.jpg'}

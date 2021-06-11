@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Route path='/home' component={NavBar}/>
+      <Route path='/' component={NavBar}/>
       <Route exact path='/' component={LandingPage}/>
     </div>
   );
