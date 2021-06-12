@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1% 3% 1% 3%;
+    padding: 1% 10% 1% 2%;
     
 }
  
@@ -27,7 +27,18 @@
 #navBarLinks {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
     /* max-width: max-content; */
+    /* margin-right: 60px; */
+}
+
+#navBarLinks h3 {
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+
+#navBarLinks h3:hover {
+    text-shadow: 1px 1px 5px whitesmoke;    
 }
 

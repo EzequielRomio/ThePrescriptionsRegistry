@@ -16,18 +16,18 @@ const NavBar = () => {
                     </h3>
                 </div>
             </div>
-            <div className='h3Font' id='navBarLinks'>
+            <div className='subtitleFont' id='navBarLinks'>
                 <Link>
-                    <h3 >Prescriptions</h3>
+                    <h3 >PRESCIPTIONS</h3>
                 </Link>
                 <Link>
-                    <h3>Patients</h3>
+                    <h3>PATIENTS</h3>
                 </Link>
                 <Link>
-                    <h3>Create Account</h3>
+                    <h3>CREATE ACCOUNT</h3>
                 </Link>
                 <Link>
-                    <h3>Community</h3>
+                    <h3>COMMUNITY</h3>
                 </Link>
             </div>
         </div>
