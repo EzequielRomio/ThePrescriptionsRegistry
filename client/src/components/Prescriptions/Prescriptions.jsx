@@ -6,10 +6,15 @@ import './Prescriptions.css';
 
 const Prescriptions = () => {
     return (
-        <div>
-            <h1>Prescriptions</h1>
-            <Menu typeOfMenu={'prescriptions'} />
-
+        <div id='prescriptions' >
+            <div className='titleMenuContainer'>
+                <div className='smooth'>
+                    <h1 className='titleFont'>Prescriptions</h1>
+                    <Menu typeOfMenu={'prescriptions'} />
+                    <div className='paddingBottom'></div>
+                </div>
+            </div>
+            
         </div>
     )
 }

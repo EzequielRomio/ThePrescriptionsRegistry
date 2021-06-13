@@ -1,0 +1,26 @@
+#menu {
+    /* background-color: lightblue; */
+    border-bottom: 2px solid mediumblue;
+    border-top: 2px solid mediumblue;
+} 
+
+#menuButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#menuButtons button {
+    background-color: white;
+    color: rgb(25, 126, 228);
+    border: 2px solid mediumblue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#menuButtons button:hover {
+    background-color: rgb(25, 126, 228);
+    color: white;
+}

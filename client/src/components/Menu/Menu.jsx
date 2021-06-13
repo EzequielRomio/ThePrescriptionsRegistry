@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Menu.css'
+
 const setMenuData = (typeOfMenu) => {
     if (typeOfMenu === 'prescriptions') {
         return [
@@ -23,9 +25,13 @@ const setMenuData = (typeOfMenu) => {
 const showMenu = (typeOfMenu) => {
     const dataToDisplay = setMenuData(typeOfMenu);
     return (
-        <div>
-            {dataToDisplay.map((title, ix) => {return (
-                <button key={ix}>{title}</button>
+        <div id='menuButtons'>
+            {dataToDisplay.map((option, ix) => {return (
+                <button key={ix}>
+                    <h3 className='h3Font'>
+                        {option}
+                    </h3>
+                </button>
             )})}
         </div>
     )
@@ -38,7 +44,7 @@ const Menu = ({typeOfMenu}) => {
     //    'community'
 
     return (
-        <div>
+        <div id='menu'>
             {showMenu(typeOfMenu)}
         </div>
     )

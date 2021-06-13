@@ -88,6 +88,14 @@ bold {
   width: 80%;
 }
 
+
+.titleMenuContainer {
+  background-image: url('https://6ada39ab3e4e4dfd9962-0915b3b9e650afef6a84b370287eeb00.ssl.cf5.rackcdn.com/glasses-prescription-georgia.jpg');
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .linkButton {
   /* height: 40px;
   width: 160px; */
@@ -110,7 +118,20 @@ bold {
   margin-top: 40px;
 }
 
+.paddingBottom {
+  padding-bottom: 40px;
+}
+
 .border {
   border-radius: 10px;
   border: 2px solid lightblue;
 }
+
+.opacity {
+  backdrop-filter: grayscale(0.5) opacity(0.8);
+}
+
+.smooth {
+  backdrop-filter: blur(4px);
+}
+
