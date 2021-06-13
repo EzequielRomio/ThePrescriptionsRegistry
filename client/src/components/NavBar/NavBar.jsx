@@ -17,7 +17,7 @@ const NavBar = () => {
                 </div>
             </div>
             <div className='subtitleFont' id='navBarLinks'>
-                <Link>
+                <Link to={'/prescriptions'}>
                     <h3 >PRESCIPTIONS</h3>
                 </Link>
                 <Link>

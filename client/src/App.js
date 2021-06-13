@@ -1,8 +1,9 @@
-import {Route} from 'react-router-dom'
+import {Route} from 'react-router-dom';
 
 import NavBar from './components/NavBar/NavBar.jsx';
 import LandingPage from './components/LandingPage/LandingPage.jsx';
-import Footer from './components/Footer/Footer.jsx'
+import Prescriptions from './components/Prescriptions/Prescriptions.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 import './App.css';
 
@@ -11,6 +12,7 @@ function App() {
     <div>
       <Route path='/' component={NavBar}/>
       <Route exact path='/' component={LandingPage}/>
+      <Route path='/prescriptions' component={Prescriptions} />
       <Route path='/' component={Footer} />
     </div>
   );
