@@ -38,7 +38,7 @@ export default function Carousel({url}) {
         <div 
             slot="container-start" 
             className="parallax-bg" 
-            style={{'background-image': `url(${url})`}} 
+            style={{backgroundImage: `url(${url})`}} 
             data-swiper-parallax="-23%">
 
         </div>

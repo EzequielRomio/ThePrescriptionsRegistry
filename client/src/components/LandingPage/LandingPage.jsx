@@ -25,7 +25,7 @@ const LandingPage = () => {
                 {/*******  Left column  *******/}
                 <div id='landingLeftColumn'>
                     <h2 className='subtitleFont'>Have you tried contact lens?</h2>
-                    <video autoplay="true" loop muted="muted" className='border'>
+                    <video autoPlay={true} loop muted="muted" className='border'>
                         <source src={lenses_manuf} type="video/mp4"></source>
                     </video>
 
