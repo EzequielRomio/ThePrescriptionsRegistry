@@ -8,15 +8,15 @@ const Footer = () => {
         <footer>
             <div id='footerTop'>
                 <div>
-                    <h3 className='h3Font'>Get in touch</h3>
-                    <Link>
-                        <p>About us</p>
+                    <h3 className='h3Font'>Get Started</h3>
+                    <Link to={'/prescriptions'}>
+                        <p>Prescriptions</p>
                     </Link>
                     <Link>
-                        <p>Our Team</p>
+                        <p>Patients</p>
                     </Link>
                     <Link>
-                        <p>Join us</p>
+                        <p>Create Account</p>
                     </Link>
                 </div>
                 

@@ -1,3 +1,9 @@
+#prescriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
 #prescriptions h1 {
     /* background-color: lightcyan; */  
     padding-top: 30px;  
@@ -7,3 +13,4 @@
     font-size: 46px;
     text-shadow: 3px 3px 3px midnightblue;
 }
+

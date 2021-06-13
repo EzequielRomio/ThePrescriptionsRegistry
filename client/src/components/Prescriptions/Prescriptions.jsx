@@ -15,6 +15,8 @@ const Prescriptions = () => {
                 </div>
             </div>
             
+            <div className='largeSeparator'></div>
+
         </div>
     )
 }
