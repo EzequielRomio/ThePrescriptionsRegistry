@@ -20,7 +20,7 @@ const NavBar = () => {
                 <Link to={'/prescriptions'}>
                     <h3 >PRESCIPTIONS</h3>
                 </Link>
-                <Link>
+                <Link to={'/patients'}>
                     <h3>PATIENTS</h3>
                 </Link>
                 <Link>
