@@ -30,7 +30,7 @@ const LandingPage = () => {
                     </video>
 
                     <h2 className='subtitleFont marginTop'>Blue light filter</h2>
-                    <img src='https://i.insider.com/5ec6c3871918245574779666?width=700' width='644px' height='364px' className='border'></img>
+                    <img src='https://i.insider.com/5ec6c3871918245574779666?width=700' alt='Blue Light Filter' width='644px' height='364px' className='border'></img>
                     <p>
                         Digital screens emit blue light, which can have negative consequences on your peepers, 
                         including strain, dry or watery eyes and irritated eyes. Blue light is also known to 
