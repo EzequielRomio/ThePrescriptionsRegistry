@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Menu from '../Menu/Menu.jsx';
+import CreatePatient from './CreatePatient.jsx';
 
 import './Patients.css';
 
@@ -18,6 +19,9 @@ const Patients = () => {
             <div className='largeSeparator'></div>
 
 
+            <div id='patientsBottom'>
+                <CreatePatient />
+            </div>
         </div>
     )
 }
