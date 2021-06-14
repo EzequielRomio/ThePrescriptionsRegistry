@@ -135,7 +135,7 @@ bold {
   backdrop-filter: blur(4px);
 }
 
-input, select, option {
+input, select, option, textarea {
   text-decoration: none;
   outline: none;
   font-family: 'Abel', sans-serif;
