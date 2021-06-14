@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import swal from 'sweetalert';
 
+import PrescriptionImg from './PrescriptionImg.jsx';
 import {hasErrors, setErrorMessage} from '../../helpers/index.js';
 import './Prescriptions.css';
 
@@ -55,10 +56,9 @@ const CreatePrescription = () => {
     return (
         <div id='createPrescription' className='h3Font'>
             <h2 className='subtitleFont subtitles'>Create Prescription</h2>
-            <div>            
-                <h3>Complete the following fields</h3>
+            <div className='displayFlexRow'>            
                 <form onSubmit={handleSubmit}>
-
+                    <h3>Complete the following fields</h3>
                     <h4>Insert Patient Name</h4>
                     <input onChange={handleChange} type='text' name='name' placeholder='Name' required></input>
                     
@@ -86,7 +86,11 @@ const CreatePrescription = () => {
 
                     <input type='submit' value='Create' className='submitButton'></input>
                 </form>
+
+                <PrescriptionImg dataToDisplay={inputs} />
+            
             </div>
+            
         </div>
     )
 }
