@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import swal from 'sweetalert';
 
+import {hasErrors, setErrorMessage} from '../../helpers/index.js';
 import './Patients.css';
+
 
 const validateBody = (inputs) => {
     const errors = {}
@@ -10,16 +12,6 @@ const validateBody = (inputs) => {
     if (inputs.hasOwnProperty('age') && inputs.age < 1) { errors.age = 'Age cant be minor than 1'}
 
     return errors
-}
-
-const hasErrors = (errors) => {
-    return Object.keys(errors).length > 0;
-}
-
-const setErrorMessage = (errors) => {
-    let message = ''
-    Object.keys(errors).forEach(error => message += errors[error] + '\n')
-    return message
 }
 
 
@@ -54,7 +46,7 @@ const CreatePatient = () => {
             swal({
                 title: "Error",
                 text: setErrorMessage(errors),
-                icon: "warning",
+                icon: "error",
                 timer: 8000,
                 padding: "0.75rem" 
             })
