@@ -22,6 +22,7 @@ const setErrorMessage = (errors) => {
     return message
 }
 
+
 const CreatePatient = () => {
     const [inputs, setInputs] = useState({});
     const [errors, setErrors] = useState({});
@@ -62,6 +63,7 @@ const CreatePatient = () => {
 
     return (
         <div id='createPatient' className='h3Font'>
+            {/* {smoothScroll()} */}
             <h2 className='subtitleFont subtitles'>Create new Patient</h2>
             <h3>Complete the following fields</h3>
             <form onSubmit={handleSubmit}>

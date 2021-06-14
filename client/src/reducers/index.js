@@ -1,16 +1,27 @@
 import {combineReducers} from 'redux'
 
-const initialState = {};
+import prescriptionsReducer from './prescriptions.js';
+
+const initialState = {
+    menuOption: null,
+};
 
 const globalReducer = (state = initialState, action) => {
     switch(action.type) {
+        case 'SET_MENU_OPTION': 
+            return {
+                ...state,
+                menuOption: action.payload
+            }
+
         default:
             return state
     }
 }
 
 const rootReducer = combineReducers({
-    globalReducer
+    globalReducer,
+    prescriptionsReducer
 })
 
-export default globalReducer;
+export default rootReducer;

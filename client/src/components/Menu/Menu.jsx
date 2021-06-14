@@ -1,5 +1,7 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 
+import {setMenuOption} from '../../actions';
 import './Menu.css'
 
 const setMenuData = (typeOfMenu) => {
@@ -22,12 +24,12 @@ const setMenuData = (typeOfMenu) => {
     } 
 } 
 
-const showMenu = (typeOfMenu) => {
+const showMenu = (typeOfMenu, handleClick) => {
     const dataToDisplay = setMenuData(typeOfMenu);
     return (
         <div id='menuButtons'>
             {dataToDisplay.map((option, ix) => {return (
-                <button key={ix}>
+                <button key={ix} onClick={(e) => handleClick(e)}>
                     <h3 className='h3Font'>
                         {option}
                     </h3>
@@ -37,15 +39,34 @@ const showMenu = (typeOfMenu) => {
     )
 }
 
+const smoothScroll = (h) => {
+    let i = h || 0;
+    if (i < 340) {
+        setTimeout(() => {
+            window.scrollTo(0, i);
+            smoothScroll(i + 3);
+        }, 10);
+    }
+}
+
+
 const Menu = ({typeOfMenu}) => {
     // menu types: 
     //    'prescriptions'
     //    'patients'
     //    'community'
 
+    const dispatch = useDispatch();
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        dispatch(setMenuOption(e.target.textContent))
+        smoothScroll()
+    }
+
     return (
         <div id='menu'>
-            {showMenu(typeOfMenu)}
+            {showMenu(typeOfMenu, handleClick)}
         </div>
     )
 }
