@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const NavBar = () => {
-    return (
-        <div>
-            navbar
-=======
 import {Link} from 'react-router-dom';
 
 import './NavBar.css'
@@ -37,7 +30,6 @@ const NavBar = () => {
                     <h3>COMMUNITY</h3>
                 </Link>
             </div>
->>>>>>> 956b549c9794df442402997fab6c5f1a1c3c731b
         </div>
     )
 }
