@@ -232,6 +232,31 @@ def validate_prescription_body(data):
     return True
 
 
+###################################################
+
+################## PATIENTS #######################
+@app.route('/patients', methods=['POST'])
+def post_patient(): 
+    patient = json.loads(request.data)
+
+    try:
+        if validate_patient_body(patient):
+            # user_id = users.post_user(patient)
+            # return json.dumps({'id': user_id})
+            return None
+
+
+    except MissingFieldError as e:
+        app.logger.debug(e.send_error_message())
+        return json.dumps({'Error': e.send_error_message()}), 400
+
+def validate_patient_body(patient): 
+    for field in ('name', 'last_name', 'age', 'provider', 'email'):
+        if not field in patient.keys():
+            app.logger.info(field)
+            raise MissingFieldError(field)
+    return True
+
 """
 TODO: 
  - delete_user must make a change on that user's prescriptions
