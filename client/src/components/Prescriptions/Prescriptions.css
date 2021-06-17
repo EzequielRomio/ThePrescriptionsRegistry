@@ -1,0 +1,42 @@
+#prescriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+#prescriptions h1 {
+    /* background-color: lightcyan; */  
+    padding-top: 30px;  
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 46px;
+    text-shadow: 3px 3px 3px midnightblue;
+}
+
+#createPrescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 720px;
+    width: 100%;
+}
+
+#createPrescription form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#prescriptionImg {
+    background-image: url('https://excelshe.com/wp-content/uploads/2019/09/Prescription-Template-32.jpg');
+    background-size: 440px 530px;
+    width: 440px;
+    height: 530px;
+    position: relative;
+    border-radius: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}

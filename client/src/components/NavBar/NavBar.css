@@ -1,0 +1,44 @@
+#navBar {
+    /* width: 100%; */
+    color: white;
+    background-color: midnightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 10% 1% 2%;
+    
+}
+ 
+#navBarRightColumn {
+    display: flex;
+    align-items: center;
+} 
+
+#navBarTitle {
+    text-shadow: 1px 1px 7px deepskyblue;
+}
+
+#navBarSubtitle {
+    color: lightskyblue;
+    margin-left: 20px;
+}
+
+
+#navBarLinks {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    /* max-width: max-content; */
+    /* margin-right: 60px; */
+}
+
+#navBarLinks h3 {
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+
+#navBarLinks h3:hover {
+    text-shadow: 1px 1px 5px whitesmoke;    
+}
+

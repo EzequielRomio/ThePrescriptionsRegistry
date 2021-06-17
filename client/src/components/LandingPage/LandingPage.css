@@ -5,26 +5,6 @@
     /* justify-items: center;  */
 }
 
-.landingPageTitle {
-    width: 100%;
-    color: white;
-    background-color: midnightblue;
-    padding: 14px 0px 14px 140px;
-    text-shadow: 1px 1px 7px deepskyblue;
-}
-
-#landingPageSubtitle {
-    margin-left: 60px;
-    width: 180px;
-    color: lightskyblue;
-    text-shadow: none;
-}
-
-#landingVideo {
-    border-radius: 10px;
-    border: 2px solid lightblue;
-}
-
 #landingPageBottom {
     background-color: rgb(226, 239, 248);
     border-radius: 5px;
@@ -32,18 +12,28 @@
     height: max-content;
     padding-bottom: 60px;
     padding: 10px;
+    padding-top: 40px;
     /* Display flex in class*/
     justify-content: space-evenly;
     align-items: flex-start;
 }
 
-#profAccount {
-    width: 25%;
-}
-
-#profAccount p {
+#landingPageBottom p {
     color: rgb(26, 128, 230);
 }
+
+#landingLeftColumn {
+    width: min-content;
+}
+
+#landingRightColumn {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 
 /* Swiper class provided by swiper demo */
 

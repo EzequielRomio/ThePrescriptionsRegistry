@@ -88,6 +88,14 @@ bold {
   width: 80%;
 }
 
+
+.titleMenuContainer {
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
 .linkButton {
   /* height: 40px;
   width: 160px; */
@@ -104,4 +112,56 @@ bold {
 
 .linkButton:hover {
   background-color: #3a9bfc;
+}
+
+.marginTop {
+  margin-top: 40px;
+}
+
+.paddingBottom {
+  padding-bottom: 40px;
+}
+
+.border {
+  border-radius: 10px;
+  border: 2px solid lightblue;
+}
+
+.opacity {
+  backdrop-filter: grayscale(0.5) opacity(0.8);
+}
+
+.smooth {
+  backdrop-filter: blur(4px);
+}
+
+input, select, option, textarea {
+  text-decoration: none;
+  outline: none;
+  font-family: 'Abel', sans-serif;
+  font-size: 16px;
+  border: 1px solid mediumblue;
+  border-radius: 3px;
+  min-width: 180px;
+}
+
+.submitButton {
+  width: 180px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  background-color: dodgerblue;
+  color: white;
+  font-size: 26px;
+  border: 2px solid mediumblue;
+}
+
+.submitButton:hover {
+  background-color: white;
+  color: dodgerblue;
+} 
+
+.subtitles {
+  text-shadow: 2px 2px 2px white;
+  text-decoration: black;
+  text-decoration-line: underline;
 }

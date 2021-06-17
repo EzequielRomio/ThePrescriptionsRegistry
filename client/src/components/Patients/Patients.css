@@ -1,0 +1,34 @@
+#patients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+#patients h1 {
+    /* background-color: lightcyan; */  
+    padding-top: 30px;  
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 46px;
+    text-shadow: 3px 3px 3px midnightblue;
+}
+
+#patientsBottom {
+    width: 100%;
+    background-color: rgb(226, 239, 248);
+}
+
+#createPatient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 480px;
+}
+
+#createPatient form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
