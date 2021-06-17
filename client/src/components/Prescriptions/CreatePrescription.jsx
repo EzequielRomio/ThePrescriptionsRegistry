@@ -56,7 +56,7 @@ const CreatePrescription = () => {
     return (
         <div id='createPrescription' className='h3Font'>
             <h2 className='subtitleFont subtitles'>Create Prescription</h2>
-            <div className='displayFlexRow'>            
+            <div className='displayFlexRow' className='formImgContainer'>            
                 <form onSubmit={handleSubmit}>
                     <h3>Complete the following fields</h3>
                     <h4>Insert Patient Name</h4>
