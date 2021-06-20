@@ -12,7 +12,7 @@ import './index.css';
 
 dotenv.config()
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://127.0.0.1:5000";
 
 ReactDOM.render(
   <React.StrictMode>
