@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux'
 
 import prescriptionsReducer from './prescriptions.js';
+import patientsReducer from './patients.js';
 
 const initialState = {
     menuOption: null,
@@ -21,7 +22,8 @@ const globalReducer = (state = initialState, action) => {
 
 const rootReducer = combineReducers({
     globalReducer,
-    prescriptionsReducer
+    prescriptionsReducer,
+    patientsReducer
 })
 
 export default rootReducer;

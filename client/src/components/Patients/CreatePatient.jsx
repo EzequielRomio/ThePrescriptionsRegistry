@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import {useDispatch} from 'react-redux';
 import swal from 'sweetalert';
 
+import {postPatient} from '../../actions/index.js'
 import {hasErrors, setErrorMessage} from '../../helpers/index.js';
 import './Patients.css';
 
@@ -18,6 +20,7 @@ const validateBody = (inputs) => {
 const CreatePatient = () => {
     const [inputs, setInputs] = useState({});
     const [errors, setErrors] = useState({});
+    const dispatch = useDispatch();
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -34,7 +37,7 @@ const CreatePatient = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!hasErrors(errors)) {
-            // post patient
+            dispatch(postPatient(inputs))
             swal({ 
                 title: "Patient Created", 
                 text: `Patient ${inputs.name} ${inputs.lastName}`,
@@ -55,7 +58,6 @@ const CreatePatient = () => {
 
     return (
         <div id='createPatient' className='h3Font'>
-            {/* {smoothScroll()} */}
             <h2 className='subtitleFont subtitles'>Create new Patient</h2>
             <h3>Complete the following fields</h3>
             <form onSubmit={handleSubmit}>
@@ -78,7 +80,7 @@ const CreatePatient = () => {
                 </select>
                 
                 <h4>Insert Email</h4>
-                <input type='email'></input>
+                <input type='email' name='email' onChange={handleChange}></input>
 
                 <input type='submit' value='Create' className='submitButton'></input>
             </form>

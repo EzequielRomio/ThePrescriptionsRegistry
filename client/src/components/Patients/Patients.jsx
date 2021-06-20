@@ -6,18 +6,6 @@ import CreatePatient from './CreatePatient.jsx';
 
 import './Patients.css';
 
-
-const smoothScroll = (h) => {
-    let i = h || 0;
-    if (i < 340) {
-        setTimeout(() => {
-            window.scrollTo(0, i);
-            smoothScroll(i + 3);
-        }, 10);
-    }
-}
-
-
 const Patients = () => {
 
     const menuOption = useSelector((state) => state.globalReducer.menuOption)
