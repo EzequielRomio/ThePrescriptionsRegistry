@@ -6,16 +6,16 @@ from models import sql_commands
 def post_prescription(prescription):
     prescription['created_date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     row = (
-        prescription['user_id'], 
+        prescription['patient_id'], 
         prescription['prescription_date'], 
         prescription['created_date'], 
-        prescription['od'], 
-        prescription['oi'], 
+        prescription['right_eye'], 
+        prescription['left_eye'], 
         prescription['addition'], 
         prescription['notes'], 
         prescription['doctor']
     )
-    query = 'INSERT INTO prescriptions (user_id, prescription_date, created_date, od, oi, addition, notes, doctor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+    query = 'INSERT INTO prescriptions (patient_id, prescription_date, created_date, right_eye, left_eye, addition, notes, doctor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
 
     prescription_id = sql_commands.sql_execute_post(query, row)
 

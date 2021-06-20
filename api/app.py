@@ -89,6 +89,28 @@ def get_user_prescriptions(user_id):
         return json.dumps({'Error': e.send_error_message()}), 404    
 
 
+####################### PATIENTS ####################### 
+@app.route('/patients', methods=['GET'])
+def get_patients():
+    return json.dumps(patients.get_patients())
+
+
+@app.route('/patients/<patient_id>', methods=['GET'])
+def get_patient(patient_id):
+    fields = request.json
+    #fields = json.loads(request.data)
+    try:
+        patient_data = patients.get_patient(patient_id, fields)
+
+        if not patient_data:
+            raise IdNotFoundError(patient_id)
+
+        return json.dumps(patient_data)
+
+    except IdNotFoundError as e:
+        return json.dumps({'Error': e.send_error_message()}), 404
+
+
 ################################################ DELETE-METHODS #####################################################
 
 ######################## USERS ##########################
@@ -209,8 +231,8 @@ def prescription_post():
     prescription = json.loads(request.data)
     try:
         if validate_prescription_body(prescription):
-            if not users.get_user(prescription['user_id']):
-                raise IdNotFoundError(prescription['user_id'])
+            if not patients.get_patient(prescription['patient_id']):
+                raise IdNotFoundError(prescription['patient_id'])
 
             prescription_id = prescriptions.post_prescription(prescription)
             return json.dumps({'id': prescription_id})
@@ -225,7 +247,7 @@ def prescription_post():
 
 
 def validate_prescription_body(data):
-    for field in ('user_id', 'prescription_date', 'od', 'oi'):
+    for field in ('patient_id', 'prescription_date', 'right_eye', 'left_eye'):
         if not field in data.keys():
             app.logger.info(field)
             raise MissingFieldError(field)
