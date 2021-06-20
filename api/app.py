@@ -5,7 +5,7 @@ import logging
 from flask import Flask, request
 from flask_cors import CORS
 
-from models import users, prescriptions
+from models import users, prescriptions, patients
 
 
 class ServerError(Exception):
@@ -241,9 +241,8 @@ def post_patient():
 
     try:
         if validate_patient_body(patient):
-            # user_id = users.post_user(patient)
-            # return json.dumps({'id': user_id})
-            return None
+            patient_id = patients.post_patient(patient)
+            return json.dumps({'id': patient_id})
 
 
     except MissingFieldError as e:
