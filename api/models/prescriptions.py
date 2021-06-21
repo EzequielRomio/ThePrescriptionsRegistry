@@ -11,9 +11,9 @@ def post_prescription(prescription):
         prescription['created_date'], 
         prescription['right_eye'], 
         prescription['left_eye'], 
-        prescription['addition'], 
-        prescription['notes'], 
-        prescription['doctor']
+        'addition' in prescription and prescription['addition'], 
+        'notes' in prescription and prescription['notes'], 
+        'doctor' in prescription and prescription['doctor']
     )
     query = 'INSERT INTO prescriptions (patient_id, prescription_date, created_date, right_eye, left_eye, addition, notes, doctor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
 

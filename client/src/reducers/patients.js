@@ -9,6 +9,11 @@ const patientsReducer = (state=initialState, action) => {
                 ...state, patients: [...state.patients, action.payload]
             }
         
+        case 'GET_PATIENTS':
+            return {
+                ...state, patients: action.payload
+            }
+
         default:
             return state;
     }

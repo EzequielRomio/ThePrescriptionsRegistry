@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import swal from 'sweetalert';
 
 import PrescriptionImg from './PrescriptionImg.jsx';
+import {postPrescription, getPatients} from '../../actions/index.js';
 import {hasErrors, setErrorMessage} from '../../helpers/index.js';
 import './Prescriptions.css';
 
@@ -13,12 +15,27 @@ const validateBody = (inputs) => {
     return errors
 }
 
+const showPatients = (patients, handleChange) => {
+    return patients.map(patient => {
+        return (
+            <option value={patient.id} key={patient.id} onChange={handleChange}>{patient.name} {patient.lastName}</option>
+        )
+    })
+}
 
 const CreatePrescription = () => {
     const [inputs, setInputs] = useState({});
     const [errors, setErrors] = useState({});
+    const patients = useSelector((state) => state.patientsReducer.patients); 
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        patients && patients.length === 0 && dispatch(getPatients())
+    })
 
     const handleChange = (e) => {
+        console.log(e)
         e.preventDefault();
         setInputs({
             ...inputs,
@@ -34,6 +51,7 @@ const CreatePrescription = () => {
         e.preventDefault();
         if (!hasErrors(errors)) {
             // post patient
+            dispatch(postPrescription(inputs))
             swal({ 
                 title: "Prescription Created", 
                 text: `Prescription for patient: ${inputs.name} ${inputs.lastName}`,
@@ -59,12 +77,12 @@ const CreatePrescription = () => {
             <div className='displayFlexRow formImgContainer'>            
                 <form onSubmit={handleSubmit}>
                     <h3>Complete the following fields</h3>
-                    <h4>Insert Patient Name</h4>
-                    <input onChange={handleChange} type='text' name='name' placeholder='Name' required></input>
                     
-                    <h4>Insert Patient Last Name</h4>
-                    <input onChange={handleChange} type='text' name='lastName' placeholder='Last Name' required></input>
-                    
+                    <h4>Select Patient</h4>
+                    <select name='patientId' onChange={handleChange}>
+                        {patients && patients.length > 0 && showPatients(patients, handleChange)}
+                    </select>
+
                     <h4>Insert Prescription's Date</h4>
                     <input onChange={handleChange} type='date' name='prescriptionDate' placeholder='Age' required></input>
 
