@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 
 import Menu from '../Menu/Menu.jsx'
 import CreatePrescription from './CreatePrescription.jsx';
+import ShowPrescriptions from './ShowPrescriptions.jsx';
 
 import './Prescriptions.css';
 
@@ -24,6 +25,7 @@ const Prescriptions = () => {
 
             <div id='patientsBottom'>
                 {menuOption === 'Create Prescription' && <CreatePrescription />}
+                {menuOption === 'Search Prescriptions by Patient' && <ShowPrescriptions />}
             </div>
 
         </div>

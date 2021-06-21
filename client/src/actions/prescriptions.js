@@ -21,3 +21,15 @@ export const postPrescription = (prescription) => {
         }
     }
 }
+
+export const getPrescriptionsByPatient = (patientId) => {
+    return async (dispatch) => {
+        const res = await axios.get(`patients/${patientId}/prescriptions`)
+        const prescriptions = res.data;
+        if (prescriptions.length === 0) {
+            dispatch({type: 'GET_PRESCRIPTIONS_BY_PATIENT', payload: ['no matches']})
+        } else {
+            dispatch({type: 'GET_PRESCRIPTIONS_BY_PATIENT', payload: prescriptions})
+        }
+    }
+}

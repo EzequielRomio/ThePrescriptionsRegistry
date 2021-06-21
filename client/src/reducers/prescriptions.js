@@ -1,5 +1,8 @@
+import { parseCase } from "../helpers/index.js";
+
 const initialState = {
-    prescriptions: []
+    prescriptions: [],
+    prescriptionsByPatient: []
 };
 
 const prescriptionsReducer = (state=initialState, action) => {
@@ -8,6 +11,11 @@ const prescriptionsReducer = (state=initialState, action) => {
             return {
                 ...state,
                 prescriptions: [...state.prescriptions, action.payload]
+            }
+        case 'GET_PRESCRIPTIONS_BY_PATIENT':
+            return {
+                ...state,
+                prescriptionsByPatient: (action.payload[0] === 'no matches' && action.payload) || parseCase(action.payload)
             }
 
         default:
