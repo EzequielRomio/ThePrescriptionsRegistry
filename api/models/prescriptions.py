@@ -37,8 +37,8 @@ def get_prescription(prescription_id):
     return prescription
 
 
-def get_prescriptions_by_user(user_id):
-    query = 'SELECT * FROM prescriptions WHERE user_id = {}'.format(user_id)
+def get_prescriptions_by_patient(patient_id):
+    query = 'SELECT * FROM prescriptions WHERE patient_id = {}'.format(patient_id)
 
     return sql_commands.sql_execute_get_list(query)
 

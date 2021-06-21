@@ -75,15 +75,15 @@ def get_prescription(prescription_id):
         return json.dumps({'Error': e.send_error_message()}), 404
 
 
-@app.route('/users/<user_id>/prescriptions', methods=['GET'])
-def get_user_prescriptions(user_id):
+@app.route('/patients/<patient_id>/prescriptions', methods=['GET'])
+def get_patient_prescriptions(patient_id):
     try:
-        if users.get_user(user_id):
-            result = prescriptions.get_prescriptions_by_user(user_id)
+        if patients.get_patient(patient_id):
+            result = prescriptions.get_prescriptions_by_patient(patient_id)
             
             return json.dumps(result)
         else:
-            raise IdNotFoundError(user_id)
+            raise IdNotFoundError(patient_id)
 
     except IdNotFoundError as e:
         return json.dumps({'Error': e.send_error_message()}), 404    
