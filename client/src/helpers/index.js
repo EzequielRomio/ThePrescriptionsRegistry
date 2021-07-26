@@ -12,8 +12,9 @@ const parseCase = (array) => {
     // array filled with objects: {last_name: 'john'} => {lastName: 'john'}
     const result = []
     for (const object of array) {
+        const newObject = {}
         for (const key in object) {
-            
+
             const words = key.split('_');
             let capitalizedWords = '';
             words.forEach((word, index) => {                
@@ -28,8 +29,9 @@ const parseCase = (array) => {
                 capitalizedWords += capitalized;
                 
             })
-            result.push({[capitalizedWords]: object[key]})
+            newObject[capitalizedWords] = object[key]
         }
+        result.push(newObject)
     }
     return result;
 }
